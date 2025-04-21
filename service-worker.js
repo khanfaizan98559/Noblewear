@@ -1,12 +1,12 @@
 const CACHE_NAME = "noblewear-cache-v1";
 const urlsToCache = [
-  "./index.html",
-  "./assets/css/styles.css",
-  "./assets/js/main.js",
-  "./assets/img/icons/icon-192x192.png",
-  "./assets/img/icons/icon-512x512.png",
-  "./assets/img/featured1.png",
-  "./assets/img/featured3.png"
+  "/index.html",
+  "/assets/css/styles.css",
+  "/assets/js/main.js",
+  "/assets/img/icons/icon-192x192.png",
+  "/assets/img/icons/icon-512x512.png",
+  "/assets/img/featured1.png",
+  "/assets/img/featured3.png"
 ];
 
 // Install the service worker
@@ -35,15 +35,21 @@ self.addEventListener("activate", (event) => {
 
 // Fetch resources
 self.addEventListener("fetch", (event) => {
+  console.log("Fetching:", event.request.url); // Log the requested URL
   event.respondWith(
     caches.match(event.request).then((response) => {
+      if (response) {
+        console.log("Serving from cache:", event.request.url);
+      } else {
+        console.log("Fetching from network:", event.request.url);
+      }
       return response || fetch(event.request);
     })
   );
 });
 
 navigator.serviceWorker
-  .register("service-worker.js") // Corrected path
+  .register("/service-worker.js") // Corrected path
   .then((registration) => {
     console.log("Service Worker registered with scope:", registration.scope);
   })
