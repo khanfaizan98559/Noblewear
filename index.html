@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=styler" />
+    <link rel="stylesheet" href="manifest.json">
+
+    <title>Responsive outfits website - Bedimcode</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Main Navigation">
+            <a href="#" class="nav__logo">
+                <span class="material-symbols-outlined">styler</span>NobleWear
+            </a> 
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+                    <li class="nav__item"><a href="#products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="#new" class="nav__link">New</a></li>
+                </ul>
+
+                <button class="nav__close" id="nav-close" aria-label="Close Navigation">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <div class="nav__btns">
+                <button class="change-theme" id="theme-button" aria-label="Toggle Theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button class="nav__shop" id="cart-shop" aria-label="Open Cart">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Open Navigation">
+                    <i class='bx bx-grid-alt'></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== CART ====================-->
+    <aside class="cart" id="cart" aria-labelledby="cart-title">
+        <button class="cart__close" id="cart-close" aria-label="Close Cart">
+            <i class='bx bx-x'></i>
+        </button>
+
+        <h2 class="cart__title-center" id="cart-title">My Cart</h2>
+
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/featured1.png" alt="CB-COLEBROOK watch" class="cart__img" loading="lazy">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">CB-COLEBROOK</h3>
+                    <span class="cart__price">&#8377;471</span>
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <button class="cart__amount-box" aria-label="Decrease Quantity">
+                                <i class='bx bx-minus'></i>
+                            </button>
+                            <span class="cart__amount-number">1</span>
+                            <button class="cart__amount-box" aria-label="Increase Quantity">
+                                <i class='bx bx-plus'></i>
+                            </button>
+                        </div>
+                        <button class="cart__amount-trash" aria-label="Remove Item">
+                            <i class='bx bx-trash-alt'></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/featured3.png" alt="Rose Gold watch" class="cart__img" loading="lazy">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Rose Gold</h3>
+                    <span class="cart__price">&#8377;850</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <button class="cart__amount-box" aria-label="Decrease Quantity">
+                                <i class='bx bx-minus'></i>
+                            </button>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <button class="cart__amount-box" aria-label="Increase Quantity">
+                                <i class='bx bx-plus'></i>
+                            </button>
+                        </div>
+
+                        <button class="cart__amount-trash" aria-label="Remove Item">
+                            <i class='bx bx-trash-alt'></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/new1.png" alt="Longines Rose watch" class="cart__img" loading="lazy">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Longines Rose</h3>
+                    <span class="cart__price">&#8377;980</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <button class="cart__amount-box" aria-label="Decrease Quantity">
+                                <i class='bx bx-minus'></i>
+                            </button>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <button class="cart__amount-box" aria-label="Increase Quantity">
+                                <i class='bx bx-plus'></i>
+                            </button>
+                        </div>
+
+                        <button class="cart__amount-trash" aria-label="Remove Item">
+                            <i class='bx bx-trash-alt'></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="cart__prices">
+            <span class="cart__prices-item">3 items</span>
+            <span class="cart__prices-total">&#8377;2880</span>
+        </div>
+    </aside>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home" aria-labelledby="home-title">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <picture>
+                        <source srcset="assets/img/home/home-400.webp" type="image/webp" media="(max-width: 400px)">
+                        <source srcset="assets/img/home/home-800.webp" type="image/webp" media="(max-width: 800px)">
+                        <source srcset="assets/img/home/home-1200.webp" type="image/webp">
+                        <source srcset="assets/img/home/home-400.png" type="image/png" media="(max-width: 400px)">
+                        <source srcset="assets/img/home/home-800.png" type="image/png" media="(max-width: 800px)">
+                        <img src="assets/img/home/home-1200.png" alt="Home Image" class="home__img" loading="lazy">
+                    </picture>
+                </div>
+
+
+                <div class="home__data">
+                    <h1 class="home__title" id="home-title">NEW OUTFIT <br> COLLECTIONS B720</h1>
+                    <p class="home__description">
+                        Latest arrival of the new imported outfits of the B720 series, 
+                        with a modern and resistant design.
+                    </p>
+                    <span class="home__price">&#8377;1245</span>
+
+                    <div class="home__btns">
+                        <a href="#" class="button button--gray button--small">
+                            Discover
+                        </a>
+
+                        <button class="button home__button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== FEATURED ====================-->
+        <section id="featured" aria-labelledby="featured-title">
+            <h2 id="featured-title" class="section__title">Featured</h2>
+        </section>
+
+        <div class="featured__container grid">
+            <article class="featured__card">
+                <span class="featured__tag">Sale</span>
+
+                <img src="assets/img/featured1.png" alt="CB-COLEBROOK watch" class="featured__img" loading="lazy">
+
+                <div class="featured__data">
+                    <h3 class="featured__title">CB-COLEBROOK</h3>
+                    <span class="featured__price">&#8377;471</span>
+                </div>
+
+                <button class="button featured__button">ADD TO CART</button>
+            </article>
+
+            <article class="featured__card">
+                <span class="featured__tag">Sale</span>
+
+                <img src="assets/img/featured1.png" alt="CB-COLEBROOK watch" class="featured__img" loading="lazy">
+
+                <div class="featured__data">
+                    <h3 class="featured__title">CB-COLEBROOK</h3>
+                    <span class="featured__price">&#8377;471</span>
+                </div>
+
+                <button class="button featured__button">ADD TO CART</button>
+            </article>
+
+            <article class="featured__card">
+                <span class="featured__tag">Sale</span>
+
+                <img src="assets/img/featured2.png" alt="Raymond watch" class="featured__img">
+
+                <div class="featured__data">
+                    <h3 class="featured__title">Raymond</h3>
+                    <span class="featured__price">&#8377;1250</span>
+                </div>
+
+                <button class="button featured__button">ADD TO CART</button>
+            </article>
+
+            <article class="featured__card">
+                <span class="featured__tag">Sale</span>
+
+                <img src="assets/img/featured3.png" alt="Rose gold watch" class="featured__img">
+
+                <div class="featured__data">
+                    <h3 class="featured__title">Rose gold</h3>
+                    <span class="featured__price">&#8377;890</span>
+                </div>
+
+                <button class="button featured__button">ADD TO CART</button>
+            </article>
+        </div>
+
+        <!--==================== STORY ====================-->
+        <section class="story section container" aria-labelledby="story-title">
+            <div class="story__container grid">
+                <div class="story__data">
+                    <h2 class="section__title story__section-title" id="story-title">
+                        Our Story
+                    </h2>
+
+                    <h1 class="story__title">
+                        Inspirational Outfit of <br> this year
+                    </h1>
+
+                    <p class="story__description">
+                        The latest and modern outfits of this year, is available in various 
+                        presentations in this store, discover them now.
+                    </p>
+
+                    <a href="#" class="button button--small">Discover</a>
+                </div>
+
+                <div class="story__images">
+                    <picture>
+                        <source srcset="assets/img/story/story-400.webp" type="image/webp" media="(max-width: 400px)">
+                        <source srcset="assets/img/story/story-800.webp" type="image/webp" media="(max-width: 800px)">
+                        <source srcset="assets/img/story/story-1200.webp" type="image/webp">
+                        <source srcset="assets/img/story/story-400.png" type="image/png" media="(max-width: 400px)">
+                        <source srcset="assets/img/story/story-800.png" type="image/png" media="(max-width: 800px)">
+                        <img src="assets/img/story/story-1200.png" alt="Story Image" class="story__img" loading="lazy">
+                    </picture>
+                    <div class="story__square"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PRODUCTS ====================-->
+        <section class="products section container" id="products">
+            <h2 class="section__title">
+                Products
+            </h2>
+
+            <div class="products__container grid">
+                <article class="products__card">
+                    <img src="assets/img/product1.png" alt="Spirit rose watch" class="products__img" loading="lazy">
+
+                    <h3 class="products__title">Spirit rose</h3>
+                    <span class="products__price">&#8377;1500</span>
+
+                    <button class="products__button">
+                        <i class='bx bx-shopping-bag'></i>
+                    </button>
+                </article>
+
+                <article class="products__card">
+                    <img src="assets/img/product2.png" alt="Khaki pilot watch" class="products__img" loading="lazy">
+
+                    <h3 class="products__title">Khaki pilot</h3>
+                    <span class="products__price">&#8377;1350</span>
+
+                    <button class="products__button">
+                        <i class='bx bx-shopping-bag'></i>
+                    </button>
+                </article>
+
+                <article class="products__card">
+                    <img src="assets/img/product3.png" alt="Jubilee black watch" class="products__img" loading="lazy">
+
+                    <h3 class="products__title">Jubilee black</h3>
+                    <span class="products__price">&#8377;870</span>
+
+                    <button class="products__button">
+                        <i class='bx bx-shopping-bag'></i>
+                    </button>
+                </article>
+
+                <article class="products__card">
+                    <img src="assets/img/product4.png" alt="Fosil me3 watch" class="products__img" loading="lazy">
+
+                    <h3 class="products__title">Fosil me3</h3>
+                    <span class="products__price">&#8377;650</span>
+
+                    <button class="products__button">
+                        <i class='bx bx-shopping-bag'></i>
+                    </button>
+                </article>
+
+                <article class="products__card">
+                    <img src="assets/img/product5.png" alt="Duchen watch" class="products__img" loading="lazy">
+
+                    <h3 class="products__title">Duchen</h3>
+                    <span class="products__price">&#8377;950</span>
+
+                    <button class="products__button">
+                        <i class='bx bx-shopping-bag'></i>
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section container">
+            <div class="testimonial__container grid">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                They are the best outfits that one acquires, also they are always with the latest 
+                                news and trends, with a very comfortable price and especially with the attention 
+                                you receive, they are always attentive to your questions.
+                            </p>
+                            <h3 class="testimonial__date">March 27. 2021</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="assets/img/testimonial1.jpg" alt="Lee Doe" class="testimonial__perfil-img" loading="lazy">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Lee Doe</span>
+                                    <span class="testimonial__perfil-detail">Director of a company</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                They are the best outfits that one acquires, also they are always with the latest 
+                                news and trends, with a very comfortable price and especially with the attention 
+                                you receive, they are always attentive to your questions.
+                            </p>
+                            <h3 class="testimonial__date">March 27. 2021</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="assets/img/testimonial2.jpg" alt="Samantha Mey" class="testimonial__perfil-img" loading="lazy">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Samantha Mey</span>
+                                    <span class="testimonial__perfil-detail">Director of a company</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                They are the best outfits that one acquires, also they are always with the latest 
+                                news and trends, with a very comfortable price and especially with the attention 
+                                you receive, they are always attentive to your questions.
+                            </p>
+                            <h3 class="testimonial__date">March 27. 2021</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="assets/img/testimonial3.jpg" alt="Raul Zaman" class="testimonial__perfil-img" loading="lazy">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Raul Zaman</span>
+                                    <span class="testimonial__perfil-detail">Director of a company</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-next">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bx-left-arrow-alt' ></i>
+                    </div>
+                </div>
+
+                <div class="testimonial__images">
+                    <div class="testimonial__square"></div>
+                    <img src="assets/img/testimonial.png" alt="Testimonial Image" class="testimonial__img" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!--==================== NEW ====================-->
+        <section class="new section container" id="new">
+            <h2 class="section__title">
+                New Arrivals
+            </h2>
+            
+            <div class="new__container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/img/new1.png" alt="Longines rose watch" class="new__img" loading="lazy">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">Longines rose</h3>
+                                <span class="new__price">&#8377;980</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/img/new2.png" alt="Jazzmaster watch" class="new__img" loading="lazy">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">Jazzmaster</h3>
+                                <span class="new__price">&#8377;1150</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/img/new3.png" alt="Dreyfuss gold watch" class="new__img" loading="lazy">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">Dreyfuss gold</h3>
+                                <span class="new__price">&#8377;750</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/img/new4.png" alt="Portuguese rose watch" class="new__img" loading="lazy">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">Portuguese rose</h3>
+                                <span class="new__price">&#8377;1590</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== NEWSLETTER ====================-->
+        <section class="newsletter section container">
+            <div class="newsletter__bg grid">
+                <div>
+                    <h2 class="newsletter__title">Subscribe Our <br> Newsletter</h2>
+                    <p class="newsletter__description">
+                        Don't miss out on your discounts. Subscribe to our email 
+                        newsletter to get the best offers, discounts, coupons, 
+                        gifts and much more.
+                    </p>
+                </div>
+
+                <form action="" class="newsletter__subscribe">
+                    <input type="email" placeholder="Enter your email" class="newsletter__input">
+                    <button class="button">
+                        SUBSCRIBE
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>1234 - LPU</li>
+                    <li>Phagwara, Punjab</li>
+                    <li>India - 144410</li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Customer Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Copy Right</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Product</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Shirts</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">T-Shirts</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Blazers</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Pants</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">&#169; NOBLEWEAR. All rights reserved</span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then((registration) => {
+            console.log("Service Worker registered with scope:", registration.scope);
+          })
+          .catch((error) => {
+            console.error("Service Worker registration failed:", error);
+          });
+      }
+    </script>
+</body>
+</html>
