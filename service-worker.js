@@ -46,11 +46,13 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
-navigator.serviceWorker
-  .register("/service-worker.js") // Corrected path
-  .then((registration) => {
-    console.log("Service Worker registered with scope:", registration.scope);
-  })
-  .catch((error) => {
-    console.error("Service Worker registration failed:", error);
+// This code is correct and should be in the main JS (NOT in service-worker.js)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/service-worker.js')
+      .then(reg => console.log('✅ Service Worker registered:', reg))
+      .catch(err => console.error('❌ Service Worker registration failed:', err));
   });
+}
+
