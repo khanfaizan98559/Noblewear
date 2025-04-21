@@ -1,12 +1,10 @@
 const CACHE_NAME = "noblewear-cache-v1";
 const urlsToCache = [
-  "/index.html",
-  "/assets/css/styles.css",
-  "/assets/js/main.js",
-  "/assets/img/icons/icon-192x192.png",
-  "/assets/img/icons/icon-512x512.png",
-  "/assets/img/featured1.png",
-  "/assets/img/featured3.png"
+  "./index.html",
+  "./assets/css/styles.css",
+  "./assets/js/main.js",
+  "./assets/img/featured1.png",
+  "./assets/img/featured3.png"
 ];
 
 // Install the service worker
