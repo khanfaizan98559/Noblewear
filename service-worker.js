@@ -1,5 +1,6 @@
 const CACHE_NAME = "noblewear-cache-v1";
 const urlsToCache = [
+  "/",
   "./index.html",
   "./assets/css/styles.css",
   "./assets/js/main.js",
@@ -58,7 +59,7 @@ self.addEventListener("fetch", (event) => {
           .catch((err) => {
             console.error("Network request failed:", err);
             // Return a fallback response if network request fails (offline.html as an example)
-            return caches.match("/offline.html"); // You can create an offline page for this scenario
+            return caches.match("/.html"); // You can create an offline page for this scenario
           });
       })
       .catch((err) => {
